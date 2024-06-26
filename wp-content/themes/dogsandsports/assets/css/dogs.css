@@ -1,0 +1,261 @@
+/*colors*/
+:root {
+  --col-text: #1A1A1A;
+  --col-main: #8A3324;
+  --col-dark-brown: #6E291D;
+
+  /* Font sizes. */
+  --font-size-menu: 19px;
+  --font-size-h1: 28px;
+  --font-size-h2: 23px;
+  --font-size-h3: 19px;
+  --font-size-h4: 14px;
+  --font-size-lauftext: 16px;
+  --font-size-mini: 12px;
+
+  /* Line heights. */
+  --line-height-menu: 25px;
+  --line-height-h1: 36px;
+  --line-height-h2: 31px;
+  --line-height-h3: 27px;
+  --line-height-h4: 18px;
+  --line-height-lauftext: 24px;
+  --line-height-mini: 18px;
+
+  /* Font sizes mid */
+  --font-size-m-h1: 33px;
+  --font-size-m-h2: 28px;
+
+  /* Line heights mid */
+  --line-height-m-h1: 44px;
+  --line-height-m-h2: 37px;
+
+  /* Font sizes big */
+  --font-size-l-h1: 52px;
+  --font-size-l-h2: 24px;
+  --font-size-l-h3: 24px;
+  --font-size-l-h4: 17px;
+  --font-size-l-lauftext: 15px;
+
+  /* Line heights. */
+  --line-height-l-h1: 66px;
+  --line-height-l-h2: 34px;
+  --line-height-l-h3: 34px;
+  --line-height-l-h4: 28px;
+  --line-height-l-lauftext: 23px;
+
+  /* Font sizes xl */
+  --font-size-xl-h1: 65px;
+  --font-size-xl-h2: 36px;
+  --font-size-xl-h3: 30px;
+  --font-size-xl-h4: 21px;
+  --font-size-xl-lauftext: 23px;
+
+  /* Line heights. */
+  --line-height-xl-h1: 80px;
+  --line-height-xl-h2: 46px;
+  --line-height-xl-h3: 40px;
+  --line-height-xl-h4: 30px;
+  --line-height-xl-lauftext: 35px;
+
+  --font-size-smaler: 21px;
+  --font-size-mini: 13px;
+
+  --font-size-lauftext-mobile: 16px;
+  --line-height-lauftext-mobile: 24px;
+
+  --font-size-lauftext-mobile-mini: 14px;
+  --line-height-lauftext-mobile-mini: 19px;
+
+  --line-height-smaler: 31px;
+  --line-height-mini: 25px;
+
+  /* font weight. */
+  --font-weight-regular: 300;
+  --font-weight-bold: 700;
+  --font-weight-fett: 900;
+
+  /* other  */
+  --maxw-content: 1500px;
+  --maxw-image: 1200px;
+  --satzspiegel: 1300px;
+  --max-col-w: 900px;
+  --max-content-inside: 750px;
+
+  /* spaces  */
+  --spaces-xs: 20px;
+  --spaces-s: 30px;
+  --spaces-ml: 45px;
+  --spaces-m: 40px;
+
+  --spaces-l: 50px;
+  --spaces-xl: 90px;
+  --spaces-xxl: 120px;
+
+  --border-mask: 6px 6px 0px 0px;
+}
+
+
+/* barlow-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/barlow-v12-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/barlow-v12-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+body {
+  font-family: 'Barlow';
+  font-weight: 400;
+}
+
+button.menu-toggle {
+    background: var(--col-dark-brown);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: absolute;
+    right: -38px;
+    top: -35px;
+    border: none;
+    cursor: pointer;
+}
+
+.toggled button.menu-toggle {
+    background: white;
+    color: var(--col-main);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: absolute;
+    right: -38px;
+    top: -35px;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span.line {
+    border: 1.5px solid white;
+    display: block;
+    float: left;
+    width: 25px;
+    margin-top: 5px;
+    clear: both;
+    border-radius: 2px;
+    margin-left: 7px;
+    text-align: right;
+}
+
+.toggled span.line {
+  display: none;
+  opacity: 0;
+}
+
+.menu-toggle svg {
+  opacity: 0;
+  display: none;
+}
+
+.toggled svg {
+    opacity: 1;
+    display: block;
+    width: 19px;
+    height: 19px;
+    margin: 17px 10px 0 10px;
+}
+.menu-toggle span.line:first-child {
+  margin-top: 18px;
+}
+
+span.line.short {
+    width: 15px;
+    margin-left: 16px;
+}
+
+header#masthead {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    background-color: var( --col-main);
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.main-navigation {
+    display: block;
+    width: 100%;
+    border-top: 1px solid white;
+}
+
+img.logo {
+    padding-bottom: 10px;
+}
+
+div#primary-menu {
+  margin-top: -100vh;
+  transition: margin-top 0.5s ease;
+}
+
+.main-navigation.toggled div#primary-menu {
+   margin-top: 0;
+  transition: margin-top 0.5s ease;
+}
+
+main#primary {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+.page_item_has_children.focus ul {
+    position: relative;
+    /* display: inline-block; */
+    width: 100%;
+}
+
+.menu-toggle, .main-navigation.toggled ul {
+    display: block;
+    text-align: left;
+    margin-left: 20px;
+    font-size: var( --font-size-menu);
+    line-height:  var( --line-height-menu);
+}
+
+.menu-toggle, .main-navigation.toggled ul ul {
+    margin-left: 0;
+}
+
+.main-navigation a {
+  color: white;
+}
+
+.main-navigation ul ul {
+    box-shadow: none;
+}
+
+li.page_item_has_children {
+  font-weight: 600;
+}
+
+li.page_item_has_children:after {
+    content: "";
+    background-image: url(/wp-content/themes/dogsandsports/assets/img/dropdown.svg);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    top: 10px;
+}
