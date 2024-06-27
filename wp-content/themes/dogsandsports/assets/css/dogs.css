@@ -1,261 +1,257 @@
-/*colors*/
-:root {
-  --col-text: #1A1A1A;
-  --col-main: #8A3324;
-  --col-dark-brown: #6E291D;
-
-  /* Font sizes. */
-  --font-size-menu: 19px;
-  --font-size-h1: 28px;
-  --font-size-h2: 23px;
-  --font-size-h3: 19px;
-  --font-size-h4: 14px;
-  --font-size-lauftext: 16px;
-  --font-size-mini: 12px;
-
-  /* Line heights. */
-  --line-height-menu: 25px;
-  --line-height-h1: 36px;
-  --line-height-h2: 31px;
-  --line-height-h3: 27px;
-  --line-height-h4: 18px;
-  --line-height-lauftext: 24px;
-  --line-height-mini: 18px;
-
-  /* Font sizes mid */
-  --font-size-m-h1: 33px;
-  --font-size-m-h2: 28px;
-
-  /* Line heights mid */
-  --line-height-m-h1: 44px;
-  --line-height-m-h2: 37px;
-
-  /* Font sizes big */
-  --font-size-l-h1: 52px;
-  --font-size-l-h2: 24px;
-  --font-size-l-h3: 24px;
-  --font-size-l-h4: 17px;
-  --font-size-l-lauftext: 15px;
-
-  /* Line heights. */
-  --line-height-l-h1: 66px;
-  --line-height-l-h2: 34px;
-  --line-height-l-h3: 34px;
-  --line-height-l-h4: 28px;
-  --line-height-l-lauftext: 23px;
-
-  /* Font sizes xl */
-  --font-size-xl-h1: 65px;
-  --font-size-xl-h2: 36px;
-  --font-size-xl-h3: 30px;
-  --font-size-xl-h4: 21px;
-  --font-size-xl-lauftext: 23px;
-
-  /* Line heights. */
-  --line-height-xl-h1: 80px;
-  --line-height-xl-h2: 46px;
-  --line-height-xl-h3: 40px;
-  --line-height-xl-h4: 30px;
-  --line-height-xl-lauftext: 35px;
-
-  --font-size-smaler: 21px;
-  --font-size-mini: 13px;
-
-  --font-size-lauftext-mobile: 16px;
-  --line-height-lauftext-mobile: 24px;
-
-  --font-size-lauftext-mobile-mini: 14px;
-  --line-height-lauftext-mobile-mini: 19px;
-
-  --line-height-smaler: 31px;
-  --line-height-mini: 25px;
-
-  /* font weight. */
-  --font-weight-regular: 300;
-  --font-weight-bold: 700;
-  --font-weight-fett: 900;
-
-  /* other  */
-  --maxw-content: 1500px;
-  --maxw-image: 1200px;
-  --satzspiegel: 1300px;
-  --max-col-w: 900px;
-  --max-content-inside: 750px;
-
-  /* spaces  */
-  --spaces-xs: 20px;
-  --spaces-s: 30px;
-  --spaces-ml: 45px;
-  --spaces-m: 40px;
-
-  --spaces-l: 50px;
-  --spaces-xl: 90px;
-  --spaces-xxl: 120px;
-
-  --border-mask: 6px 6px 0px 0px;
-}
-
-
-/* barlow-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Barlow';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/barlow-v12-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* barlow-500 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Barlow';
-  font-style: normal;
-  font-weight: 500;
-  src: url('../fonts/barlow-v12-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+html {
+  font-size: 1vw;
 }
 
 body {
-  font-family: 'Barlow';
+  font-family: "Barlow";
+  color: #1A1A1A;
+}
+
+h1, .h1 {
+  font-weight: 500;
+}
+
+h2, .h2 {
+  font-weight: 500;
+}
+
+h3, .h3 {
+  font-weight: 500;
+}
+
+h4, .h4 {
+  font-weight: 500;
+}
+
+/* barlow-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/barlow-v12-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-500 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/barlow-v12-latin-500.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+body {
+  font-family: "Barlow";
   font-weight: 400;
 }
 
-button.menu-toggle {
-    background: var(--col-dark-brown);
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    position: absolute;
-    right: -38px;
-    top: -35px;
-    border: none;
-    cursor: pointer;
-}
-
-.toggled button.menu-toggle {
-    background: white;
-    color: var(--col-main);
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    position: absolute;
-    right: -38px;
-    top: -35px;
-    border: none;
-    cursor: pointer;
-}
-
-.menu-toggle span.line {
-    border: 1.5px solid white;
-    display: block;
-    float: left;
-    width: 25px;
-    margin-top: 5px;
-    clear: both;
-    border-radius: 2px;
-    margin-left: 7px;
-    text-align: right;
-}
-
-.toggled span.line {
-  display: none;
-  opacity: 0;
-}
-
-.menu-toggle svg {
-  opacity: 0;
-  display: none;
-}
-
-.toggled svg {
-    opacity: 1;
-    display: block;
-    width: 19px;
-    height: 19px;
-    margin: 17px 10px 0 10px;
-}
-.menu-toggle span.line:first-child {
-  margin-top: 18px;
-}
-
-span.line.short {
-    width: 15px;
-    margin-left: 16px;
-}
-
-header#masthead {
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    justify-items: center;
-    background-color: var( --col-main);
-    text-align: center;
-    z-index: 2;
-    position: relative;
-}
-
-.main-navigation {
-    display: block;
-    width: 100%;
-    border-top: 1px solid white;
-}
-
-img.logo {
-    padding-bottom: 10px;
+main#primary {
+  position: absolute;
+  top: 0;
+  z-index: 0;
 }
 
 div#primary-menu {
   margin-top: -100vh;
-  transition: margin-top 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
 }
 
-.main-navigation.toggled div#primary-menu {
-   margin-top: 0;
-  transition: margin-top 0.5s ease;
+button.menu-toggle {
+  background: #6E291D;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  position: absolute;
+  right: -38px;
+  top: -35px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+button.menu-toggle span.line {
+  border: 1.5px solid white;
+  display: block;
+  float: left;
+  width: 30px;
+  margin-top: 5px;
+  clear: both;
+  border-radius: 2px;
+  margin-left: 14px;
+  text-align: right;
+}
+button.menu-toggle svg {
+  opacity: 0;
+  display: none;
+}
+button.menu-toggle span.line:first-child {
+  margin-top: 18px;
+}
+button.menu-toggle span.line.short {
+  width: 20px;
+  margin-left: 24px;
 }
 
-main#primary {
-    position: absolute;
-    top: 0;
-    z-index: 0;
+.toggled .search-field {
+  padding-right: 40px;
+  width: calc(100vw - 40px);
+  margin-left: 20px;
+  margin-bottom: 40px;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 40px;
+  border: none;
+}
+.toggled div#primary-menu {
+  margin-top: 0;
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+.toggled button.menu-toggle {
+  background: white;
+  color: #8A3324;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  position: absolute;
+  right: -38px;
+  top: -35px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.toggled button.menu-toggle span.line {
+  display: none;
+  opacity: 0;
+}
+.toggled button.menu-toggle svg {
+  opacity: 1;
+  display: block;
+  width: 19px;
+  height: 19px;
+  margin: 24px 10px 0 22px;
 }
 
-.page_item_has_children.focus ul {
-    position: relative;
-    /* display: inline-block; */
-    width: 100%;
+.main-navigation {
+  display: block;
+  width: 100%;
+  border-top: 1px solid white;
 }
-
-.menu-toggle, .main-navigation.toggled ul {
-    display: block;
-    text-align: left;
-    margin-left: 20px;
-    font-size: var( --font-size-menu);
-    line-height:  var( --line-height-menu);
+.main-navigation ul {
+  display: block;
+  text-align: left;
+  margin-left: 15px;
+  font-size: 19px;
+  line-height: 25px;
 }
-
-.menu-toggle, .main-navigation.toggled ul ul {
-    margin-left: 0;
+.main-navigation ul ul.children {
+  margin-left: 0;
+  box-shadow: none;
 }
-
-.main-navigation a {
+.main-navigation ul ul.children.open-sub {
+  left: 0;
+  position: relative;
+  margin-top: 15px;
+}
+.main-navigation ul ul.children li {
+  width: 100%;
+  font-weight: 400;
+  border-top: 0;
+  padding-bottom: 8px;
+  padding-top: 0;
+}
+.main-navigation ul li {
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 15px);
+  padding: 17px 0;
+  border-top: 1px solid #6E291D;
+}
+.main-navigation ul li:hover a {
+  color: #be9790;
+}
+.main-navigation ul li:hover .open-sub a {
   color: white;
 }
-
-.main-navigation ul ul {
-    box-shadow: none;
+.main-navigation ul li:hover .open-sub li:hover a {
+  color: #be9790;
+}
+.main-navigation ul li:hover.page_item_has_children:after {
+  opacity: 0.3;
+}
+.main-navigation ul li.page_item_has_children:after {
+  content: "";
+  background-image: url(/wp-content/themes/dogsandsports/assets/img/dropdown.svg);
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  position: absolute;
+  cursor: pointer;
+  right: -33px;
+  top: 28px;
+}
+.main-navigation ul li a {
+  color: white;
+  width: 100%;
 }
 
-li.page_item_has_children {
-  font-weight: 600;
+.nav-search {
+  position: relative;
+}
+.nav-search .search-form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.nav-search .search-form .search-field {
+  padding-right: 40px;
+}
+.nav-search .search-form .search-submit {
+  background-size: cover;
+  background: url("../img/search_weiss.svg");
+  overflow: hidden;
+  text-indent: -9999px;
+  padding: 0;
+  width: 22px;
+  height: 22px;
+  transition: opacity 0.3s ease;
+  margin: 0;
+  border: none;
+  background-size: cover;
+  margin-left: -34px;
 }
 
-li.page_item_has_children:after {
-    content: "";
-    background-image: url(/wp-content/themes/dogsandsports/assets/img/dropdown.svg);
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    position: absolute;
-    cursor: pointer;
-    right: 0;
-    top: 10px;
+.main-navigation ul li.page_item_has_children.open-sub:after {
+  right: 0;
+  top: -17px;
+  transform: rotate(180deg);
 }
+
+.main-navigation ul li:hover > ul, .main-navigation ul li.focus > ul {
+  left: -999em;
+}
+
+header#masthead {
+  align-items: center;
+  justify-items: center;
+  background-color: #8A3324;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  max-width: 100%;
+}
+header#masthead img.logo {
+  padding-bottom: 10px;
+}
+header#masthead .login {
+  margin: 10px 20px;
+  position: absolute;
+}
+
+/*# sourceMappingURL=dogs.css.map */

@@ -1,0 +1,9 @@
+$text_color: #1A1A1A;
+$dark_brown: #6E291D;
+$light_brown: #8A3324;
+
+// Calculate the 50% mix of dark brown and light brown
+$average_brown: mix($dark_brown, $light_brown, 50%);
+
+// Set beige to be 50% of the average brown color
+$beige: mix($average_brown, #fff, 50%);

@@ -1,0 +1,15 @@
+@import "../components/utilities.scss";
+@import "../components/fonts.scss";
+
+body {
+  font-family: 'Barlow';
+  font-weight: 400;
+}
+
+main#primary {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+

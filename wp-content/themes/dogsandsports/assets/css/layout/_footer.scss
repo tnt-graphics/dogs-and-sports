@@ -1,0 +1,195 @@
+@import "../components/colors.scss";
+@import "../components/utilities.scss";
+
+#site-footer {
+    height: $footer-height;
+    margin-top: -$footer-height; //minus 
+    @include tablet {
+        height: auto;
+        margin-top: 0;
+    }
+
+    .footer-top-block {
+        background-color: $dark-grey;
+        height: 360px;
+        padding: 25px 0 0 10%;
+        color: white;
+        display: flex;
+        @include tablet {
+            height: auto;
+            padding: $padding-mobile;
+            flex-wrap: wrap;
+        }
+        
+        .widgets-wrapper {
+            margin-right: rem(50);
+            @media only screen and (max-width: 1220px)  {
+                margin-right: 10px;
+            }
+            &:not(:last-of-type) {
+                min-width: rem(330);
+            }
+            @include tablet {
+                width: 50%;
+                margin-right: 0;
+                margin-bottom: 25px;
+                min-width: unset;
+            }
+            @include phone {
+                width: 100%;
+            }
+            p:not(:first-of-type) {
+                @include smallTextFontStyles;
+            }
+            p:first-of-type {
+                margin-bottom: 15px;
+            }
+            a {
+                color: white;
+                font-weight: 400;
+            }
+            &:last-child {
+                margin-left: auto;
+            }
+            .wp-block-button__link {
+                background: transparent;
+                border: 1px solid white;
+                font-size: 18px;
+                height: 45px;
+                line-height: 45px;
+                padding: 0 16px;
+                @include desktop_only {
+                    margin-top: 15px;
+                }
+            }
+        }
+        
+
+        .wp-block-social-links {
+            margin-bottom: 0;
+            .widget.widget_block {
+                margin-bottom: 0;
+            }
+            li{
+                width: 80px;
+                height: 80px;
+                font-size: 46px;
+                @include tablet {
+                    width: 56px;
+                    height: 56px;
+                }
+                background: transparent;
+                border: 2px solid white;
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+
+                }
+            }
+        }
+    }
+
+    .footer-bottom-block {
+        background-color: white;
+        height: 63px;
+        padding: 0 10%;
+        display: flex;
+        align-items: center;
+        @include smallTextFontStyles;
+        @include tablet {
+            flex-wrap: wrap;
+            height: auto;
+            padding: 25px $padding-mobile;
+        }
+
+        .menu-footer-container {
+            margin-left: auto;
+            @include phone {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 5px;
+            }
+            #secondary-menu {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                li {
+                    list-style: none;
+                    &:first-child {
+                        position: relative;
+                        padding-right: 2px;
+                        margin-right: 2px;
+                        a:after {
+                            content: "/";
+                            position: absolute;
+                            top: 0px;
+                            right: -6px;
+                        }
+                    }
+       
+                    a {
+                        font-weight: 400;
+                        color: $text_color;
+                        &:hover {
+                            color: $red_rollover;
+                        }
+                    }
+                }
+            }
+        }
+  
+    }
+}
+
+.cookies-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    @include smallTextFontStyles;
+    padding: 15px $padding-desktop;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    .cookies-buttons {
+        display: flex; 
+        .btn{
+            margin-right: 10px;
+        }  
+    }
+    @include phone {
+        flex-wrap: wrap;
+        & > div {
+            width: 100%;
+        }
+        & > div:first-child {
+            margin-bottom: 15px;
+        }
+        .cookies-buttons {
+            .btn:last-child {
+                margin-right: 0;
+            } 
+        }
+    }
+  
+
+    &::after {
+        position: absolute;
+        content: "";
+        left:0;
+        top:0;
+        right: 0;
+        bottom: 0;
+        //background-color: $orange;
+        z-index: 0;
+        opacity: 0.9;
+        z-index: -1;
+    }
+}
+
+

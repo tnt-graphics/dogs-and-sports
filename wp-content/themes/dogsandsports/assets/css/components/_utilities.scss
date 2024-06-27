@@ -1,0 +1,83 @@
+
+//responsive sizes
+@function rem($value) {
+	@return calc($value / 16) + rem;
+} 
+
+
+//media queries
+
+@mixin big_desktop {
+    @media only screen and (min-width: 1500px) {
+        @content;
+    }
+}
+
+
+
+@mixin fontStyles($size, $lineHeight) {
+    font-size: #{$size}+'px';
+    line-height: #{$lineHeight}+'px';
+}
+
+@mixin bodyFontStyles() {
+    @include fontStyles(23, 38);
+    @include tablet {    
+        @include fontStyles(16, 24);
+    }
+}
+
+@mixin bigTextFontStyles() {
+    @include fontStyles(30, 44);
+    @include tablet {    
+        @include fontStyles(19, 29);
+    }
+}
+
+@mixin smallTextFontStyles() {
+    @include fontStyles(18, 28);
+    @include tablet {    
+        @include fontStyles(14, 22);
+    }
+}
+
+$footer-height: 423px;
+$padding-desktop: 10%;
+$padding-mobile: 25px;
+
+
+//spaces
+$space-big: rem(120);
+$space-medium: rem(90);
+$space-normal: rem(60);
+$space-small: 40px;
+$space-very-small: 20px;
+
+//zindex
+$zindex-toggler: 13;
+$zindex-main-nav: 12;
+$zindex-logo: 11;
+$zindex-btn: 1;
+
+
+@mixin resetListStyles() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    a {
+        text-decoration: none;
+    }
+}
+
+@mixin img-shadow() {
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0; right: 0; bottom: 0;
+        opacity: 30%;
+        z-index: 0;
+        background: linear-gradient(180deg,#0000,#000000e6);
+        top: 0;
+    }
+}

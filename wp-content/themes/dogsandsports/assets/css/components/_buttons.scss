@@ -1,0 +1,44 @@
+@import "utilities.scss";
+@import "colors.scss";
+
+
+button, a.btn, input[type="submit"], .wp-block-button__link {
+    background-color: $red;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    padding: 0 20px;
+    height: 58px;
+    line-height: 58px;
+    font-weight: 500;
+    @include tablet {    
+        height: 45px;
+        line-height: 45px;
+        padding: 0 15px;
+    }
+}
+.primary, .wp-block-button__link {
+    &:hover, &:focus {
+        color: white !important;
+        background-color: $red_rollover !important;
+    }
+    &:visited {
+        background-color: $red;
+        color: white;
+    }
+}
+.wp-block-button__link {
+    font-size: 23px;
+    @include tablet {
+        font-size: 16px;
+    }
+}
+a.btn {
+    display: inline-block;
+    text-decoration: none;
+    &:visited {
+        color: white;
+    }
+}
+

@@ -1,0 +1,29 @@
+#breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    a {
+        text-decoration: none;
+        color: $text_color;
+        &:hover {
+            color: $red_rollover;
+        }
+    }
+    span {
+        text-transform: uppercase;
+        @include smallTextFontStyles();
+        font-weight: 500;
+        position: relative;
+        padding-right: 10px;
+        .fa {
+            position: absolute;
+            font-size: 14px;
+            top: 4px;
+            right: 5px;
+            @include tablet {
+                font-size: 12px;
+                top: 1px;
+            }
+        }
+    }
+}
+

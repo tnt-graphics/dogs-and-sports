@@ -1,0 +1,116 @@
+.fullscreen-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.lb-dataContainer {
+    .lb-details {
+        display: none;
+    }
+}
+#lightboxOverlay {
+    display: none !important;
+}
+
+.lb-prev, .lb-next {
+    position: absolute;
+    z-index: 1;
+    top: calc(50% - 26px);
+    background-image: url(../../img/left.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 26px;
+    height: 53px;
+    @include phone {
+        img {
+            width: 15px;
+        }
+    }
+}
+.lb-next{
+    right: 20px;
+    transform: rotate(180deg);
+}
+.lb-prev{
+    left: 20px;
+}
+
+  
+.lightbox {
+    position: fixed;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10000;
+    outline: none;
+    background-color: white;
+
+    .lb-outerContainer {
+        width: 100% !important;
+        height: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .lb-image {
+            display: block;
+          }
+    }
+    .lb-closeContainer {
+        position: absolute;
+        background-color: $red;
+        top: 0;
+        right: 0;
+        .lb-close {
+            position: relative;
+            height: 78px;
+            width: 78px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            @include tablet {
+                width: 54px;
+                height: 54px;
+            }
+            &:before, &:after {
+                position: absolute;
+                content: '';
+                width: 30px;
+                height: 4px;
+                background-color: white;
+                border-radius: 3px;
+                @include tablet {
+                    width: 28px;
+                    height: 4px;
+                }
+              }
+            &:before {
+                transform: rotate(45deg);
+            }
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .lb-loader {
+        position: absolute;
+        top: 43%;
+        left: 0;
+        width: 100%;
+    }
+
+    .lb-cancel {
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin: 0 auto;
+        background: url(../../img/loading.gif) no-repeat;
+    }
+}
+  
+
+  
+

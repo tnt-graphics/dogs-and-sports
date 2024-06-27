@@ -1,0 +1,313 @@
+@import "../components/utilities.scss";
+@import "../components/colors.scss";
+@import "../components/main-image.scss";
+@import "../components/homepage-quote.scss";
+@import "../components/slider.scss";
+@import "../components/works.scss";
+
+#homepage {
+    #homepage-banner {
+        .homepage-banner-container {
+            position: relative;
+        }
+        .main-img {
+            @include img-shadow();
+        }
+
+        .page-title-wrapper{
+            position: absolute;
+            color: white;
+            left: 4%;
+            right: 4%;
+            bottom: rem(75);
+            z-index: 1;
+            @include tablet {
+                bottom: $padding-mobile;
+                right: $padding-mobile;
+                left: $padding-mobile;
+            }
+            h1 {
+                font-weight: normal;
+                margin: 0;
+                max-width: 350px;
+                margin-bottom: 15px;
+                line-height: 40px;
+                @include tablet {
+                    margin-bottom: 0;
+                    max-width: 220px;
+                }
+            }
+            .page-title {
+                margin: 0;
+                @include desktop_only {
+                    font-size: 86px;
+                    line-height: 100px;
+                    padding-left: $space-medium;
+                    max-width: 700px;
+                }
+            }
+        }
+    }
+
+    #homepage-content {
+        display: flex;
+        padding: $space-medium 18% $space-medium 10%;
+        .homepage-content-links {
+            width: 330px;
+            a {
+                display: inline-block;
+                font-weight: 500;
+                text-decoration: none;
+                border-bottom: 1px solid $red;
+                line-height: 1.2;
+            }
+        }
+        .homepage-content-text {
+            flex: 1;
+            @include bigTextFontStyles();
+        }
+        @include tablet {
+            flex-wrap: wrap;
+            padding:  $space-small $padding-mobile;
+            .homepage-content-links, .homepage-content-text {
+                width: 100%;
+            }
+            .homepage-content-links {
+                order: 1;
+                a {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    #homepage-product-categories {
+        .product-categories-wrapper {
+            padding: 0 4%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            @include tablet {
+                padding: 0 $padding-mobile;
+                gap: $padding-mobile;
+            }
+            @include phone {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            a {
+                text-decoration: none;
+                position: relative;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                @include img-shadow();
+                img {
+                    transition: transform .5s;
+                }
+                h2 {
+                    position: absolute;
+                    border: 2px solid white;
+                    padding: 50px;
+                    max-width: 392px;
+                    z-index: 1;
+                    text-align: center;
+                    margin: 0;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        transition: transform .5s;
+                    }
+                    @include tablet {
+                        max-width: 230px;
+                        padding: $padding-mobile;
+                    }
+                }
+                &:hover {
+                    &::after {
+                        opacity: 45%;
+                    }
+                    h2 {
+                        border: none;
+                        &:before {
+                            transform: scale(1.05);
+                            border: 2px solid white;
+                        }
+                    }
+                    img {
+                       transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+
+    #homepage-specialties {
+        display: flex;
+        @include phone {
+            flex-wrap: wrap;
+        }
+        .specialties-wrapper {
+            width: 50%;
+            background-color: $light-grey;
+            padding-right: $space-normal;
+            padding-left: 10%;
+            padding-top: rem(135);
+            @include tablet {
+                padding: $padding-mobile;
+                padding-bottom: 0;
+            }
+            @include phone {
+                width: 100%;
+            }
+            h2 {
+                border-bottom: 1px solid $grey;
+                padding-bottom: 25px;
+                margin:0;
+            }
+            .specialty {
+                border-bottom: 1px solid $grey;
+                padding: 14px 0;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: calc(50% - 9px);
+                    width: 9px;
+                    height: 16px;
+                    background-image: url(../../img/pfeil.svg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                a {
+                    color: $text_color;
+                    text-decoration: none;
+                    font-weight: 500;
+                    display: block;
+                    &:hover {
+                        color: $red_rollover;
+                        transition: transform 300ms;
+                        transform: translate3d(10px, 0, 0);
+                    }
+                }
+                &:last-of-type {
+                    @include tablet {
+                        border-bottom: none;
+                    }
+                }
+            }
+
+        }
+        .specialties-slider {
+            width: 50%;
+            @include tablet {
+                background-color: $light-grey;
+            }
+            @include phone {
+                background-color: white;
+                width: 100%;
+                .slider-wrapper {
+                    margin-top: 0;
+                }
+            }
+            .slide {
+                display: block !important;
+            }
+        }
+    }
+
+    #homepage-works-slider {
+        .slick-list {
+          margin: 0 -15px;
+           .slick-slide {
+               margin: 0 15px;
+           }
+        }
+        .slider-wrapper {
+            .slick-arrow {
+                top: -75px;
+                left: auto;
+                height: 25px;
+                width: 14px;
+                &.next-slide{
+                    right: 0;
+                }
+                @include tablet {
+                    top: -55px;
+                }
+            }
+        }
+        ul.slick-dots {
+            bottom: auto;
+            top: -57px;
+            display: inline-flex;
+            left: auto;
+            right: 30px;
+            @include tablet {
+                right: 20px;
+                top: -45px;
+            }
+            li button {
+                background-color: $dark-grey;
+                opacity: 0.3;
+                &[aria-selected=true] {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    #homepage-stock {
+        display: flex;
+        padding-top: $space-big;
+        @include phone {
+            flex-wrap: wrap;
+        }
+        .stock-page-thumb, .stock-page-desc {
+            width: 50%;
+            @include phone {
+                width: 100%;
+            }
+        }
+        .stock-page-thumb {
+            img {
+                display: block;
+            }
+            @include tablet {
+                background-color: $light-grey;
+            }
+        }
+        .stock-page-desc {
+            padding-left: rem(60);
+            padding-top: $space-medium;
+            background-color: $light-grey;
+            @include tablet {
+                padding: $padding-mobile;
+            }
+            h2 {
+                margin-top: 10px;
+                margin-bottom: 20px;
+                @include tablet {
+                    margin-bottom: 10px;
+                    margin-top: 0;
+                }
+            }
+            .text_content{
+                max-width: 550px;
+                @include desktop_only {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        
+    }
+
+}
+    
+   

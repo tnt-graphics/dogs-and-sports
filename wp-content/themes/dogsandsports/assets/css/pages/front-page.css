@@ -1,0 +1,24 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 9  | /     @include phone {
+ * 10 | |         .desktop-image {
+ * 11 | |             display: none;
+ * 12 | |         }
+ * 13 | |         .mobile-image {
+ * 14 | |             display: block;
+ * 15 | |         }
+ * 16 | \     }
+ *    '
+ *   /Users/rilanatnt/Local Sites/dogsandsportsch/app/public/wp-content/themes/dogsandsports/assets/css/components/_main-image.scss 9:5  @import
+ *   /Users/rilanatnt/Local Sites/dogsandsportsch/app/public/wp-content/themes/dogsandsports/assets/css/pages/front-page.scss 3:9        root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 9  \2502  \250c      @include phone {\a 10 \2502  \2502          .desktop-image {\a 11 \2502  \2502              display: none;\a 12 \2502  \2502          }\a 13 \2502  \2502          .mobile-image {\a 14 \2502  \2502              display: block;\a 15 \2502  \2502          }\a 16 \2502  \2514      }\a    \2575 \a   /Users/rilanatnt/Local Sites/dogsandsportsch/app/public/wp-content/themes/dogsandsports/assets/css/components/_main-image.scss 9:5  @import\a   /Users/rilanatnt/Local Sites/dogsandsportsch/app/public/wp-content/themes/dogsandsports/assets/css/pages/front-page.scss 3:9        root stylesheet";
+}

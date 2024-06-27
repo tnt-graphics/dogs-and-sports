@@ -145,6 +145,8 @@ function dogsandsports_scripts() {
 
 
 	wp_enqueue_script( 'dogsandsports-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	
+	wp_enqueue_script( 'dogsandsportsjs', get_template_directory_uri() . '/assets/js/dogs.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -179,3 +181,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function theme_enqueue_scripts() {
+	// Enqueue jQuery
+	wp_enqueue_script('jquery');
+	
+	// Enqueue your custom script that depends on jQuery
+	wp_enqueue_script('custom-script', get_template_directory_uri() . '/js/custom-script.js', array('jquery'), null, true);
+}
+add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');

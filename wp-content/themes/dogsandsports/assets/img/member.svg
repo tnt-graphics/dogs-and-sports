@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47">
+  <g id="member" transform="translate(-255 -9)">
+    <circle id="Ellipse_79" data-name="Ellipse 79" cx="23.5" cy="23.5" r="23.5" transform="translate(255 9)" fill="#6e291d"/>
+    <g id="member_icon" transform="translate(-5.345 -8.115)">
+      <path id="Pfad_3740" data-name="Pfad 3740" d="M13.692,6.169A3.99,3.99,0,1,1,9.7,10.16,3.991,3.991,0,0,1,13.692,6.169Z" transform="translate(270.154 23.432)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      <path id="Pfad_3741" data-name="Pfad 3741" d="M6.3,24.453V20.284a2.842,2.842,0,0,1,.468-1.625A3.039,3.039,0,0,1,7.99,17.6a17.564,17.564,0,0,1,3.232-1.152,13.4,13.4,0,0,1,3.181-.385,13,13,0,0,1,3.174.393A18.659,18.659,0,0,1,20.8,17.6a3.016,3.016,0,0,1,1.24,1.058,2.837,2.837,0,0,1,.467,1.622v4.168" transform="translate(269.441 25.506)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

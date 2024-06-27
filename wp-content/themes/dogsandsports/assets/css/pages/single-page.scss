@@ -1,0 +1,44 @@
+@import "../components/utilities.scss";
+@import "../components/colors.scss";
+@import "../components/breadcrumbs.scss";
+@import "../components/slider.scss";
+@import "../components/lightbox.scss";
+
+
+
+#page-content {
+    padding: 0 10%;
+    margin-top: 205px;
+    @include tablet {
+        margin-top: 120px;
+        padding: $padding-mobile;
+    }
+    h1 {
+        margin: 10px 0 rem(50) 0;
+    }
+    .back-link {
+        @include smallTextFontStyles();
+    }
+    .content-wrapper {
+        display: flex;
+        .prod-gallery, .prod-description {
+            width: 50%;
+        }
+        .prod-description {
+            padding-left: $space-normal;
+        }
+        .prod-gallery img {
+            width: 100%;
+        }
+        @include phone {
+            flex-wrap: wrap;
+            .prod-gallery, .prod-description {
+                width: 100%;
+            }
+            .prod-description {
+                padding-left: 0;
+                margin-top: 25px;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import "../components/utilities.scss";
+@import "../components/colors.scss";
+@import "../components/breadcrumbs.scss";
+@import "../components/page-content.scss";
+@import "../components/lightbox.scss";
+
+#team-page {
+    .teammates {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(60);
+        padding: 0 10%;
+        @include tablet {
+            padding: 0 $padding-mobile;
+            gap: $padding-mobile;
+        }
+        @include phone {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .teammate {
+            .teammate-photo {
+                position: relative;
+                img {
+                    width: 100%;
+                }
+            } 
+        }
+    }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+  <g id="fullscreen_lightbox" data-name="fullscreen / lightbox" transform="translate(-82 -2267.999)">
+    <path id="Pfad_3761" data-name="Pfad 3761" d="M678.348,392.635H674.8v-3.553a1.489,1.489,0,0,0-2.977,0v5.042a1.489,1.489,0,0,0,1.489,1.489h5.042a1.489,1.489,0,0,0,0-2.977Z" transform="translate(-589.818 1893.387)" fill="#fff"/>
+    <path id="Pfad_3762" data-name="Pfad 3762" d="M678.348,372.593h-5.042a1.489,1.489,0,0,0-1.489,1.489v5.042a1.489,1.489,0,1,0,2.977,0V375.57h3.553a1.489,1.489,0,0,0,0-2.977Z" transform="translate(-589.818 1895.406)" fill="#fff"/>
+    <path id="Pfad_3763" data-name="Pfad 3763" d="M693.348,372.593h-5.041a1.489,1.489,0,1,0,0,2.977h3.553v3.553a1.489,1.489,0,1,0,2.977,0v-5.042A1.489,1.489,0,0,0,693.348,372.593Z" transform="translate(-591.837 1895.406)" fill="#fff"/>
+    <path id="Pfad_3764" data-name="Pfad 3764" d="M693.348,387.593a1.489,1.489,0,0,0-1.489,1.489v3.553h-3.553a1.489,1.489,0,1,0,0,2.977h5.041a1.489,1.489,0,0,0,1.489-1.489v-5.042A1.489,1.489,0,0,0,693.348,387.593Z" transform="translate(-591.837 1893.387)" fill="#fff"/>
+  </g>
+</svg>

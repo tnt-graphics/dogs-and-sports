@@ -1,0 +1,45 @@
+#works-sidebar, #homepage-works-slider{
+    padding: $space-medium 10% 0 10%;
+    @include tablet {
+        padding: 0 $padding-mobile;
+    }
+
+    h2 {
+        margin-bottom: 30px;
+        @include tablet {
+            margin: 25px 0;
+        }
+    }
+}
+.works-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+    @include tablet {
+        gap: $padding-mobile;
+    }
+    @include phone {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.work-img {
+    @include desktop_only {
+        margin-bottom: 15px;
+    }
+    img {
+        display: block;
+    }
+}
+.work-details {
+    @include smallTextFontStyles();
+    h4 {
+        margin: 0;
+    }
+}
+.all-works {
+    margin-top: $space-normal;
+    @include tablet {
+        margin-top: 25px;
+    }
+}

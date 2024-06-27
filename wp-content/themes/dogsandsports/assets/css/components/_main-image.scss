@@ -1,0 +1,17 @@
+#page-main-image, #homepage-banner  {
+    img {
+        width: 100%;
+        display: block;
+    }
+    .mobile-image {
+        display: none;
+    }
+    @include phone {
+        .desktop-image {
+            display: none;
+        }
+        .mobile-image {
+            display: block;
+        }
+    }
+}

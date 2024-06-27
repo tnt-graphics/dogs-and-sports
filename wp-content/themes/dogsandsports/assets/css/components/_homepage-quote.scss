@@ -1,0 +1,56 @@
+.homepage-quote-container {
+    display: flex;
+    padding: $space-big 10%;
+    @include phone {
+        padding: $space-small $padding-mobile;
+        flex-wrap: wrap;
+    }
+    .photo {
+        margin-right: 60px;
+        width: 390px;
+        @include tablet {
+            width: 250px;
+        }
+        @include phone {
+            margin-right: 0;
+            margin-bottom: 25px;
+            width: 100%;
+        }
+        img {
+            height: auto;
+            display: block;
+            border-radius: 50%;
+            @include phone {
+                width: 250px;
+            }
+        }
+     
+    }
+
+    .info {
+        flex: 1;
+        margin-top: 25px;
+        @include phone {
+            margin-top: 0;
+        }
+        
+        blockquote {
+            margin: 0;
+            @include phone {
+                margin-bottom: 20px;
+            }
+        }
+
+        p {
+            @include tablet {
+                margin-bottom: 10px;
+            }
+        }
+
+    
+    }
+
+}
+
+
+

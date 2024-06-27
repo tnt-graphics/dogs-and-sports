@@ -1,0 +1,58 @@
+@import "../components/utilities.scss";
+@import "../components/colors.scss";
+@import "../components/breadcrumbs.scss";
+@import "../components/page-content.scss";
+@import "../components/lightbox.scss";
+
+#stock-page {
+
+    #contact-page-btn {
+        margin-top: 30px;
+        font-size: 23px;
+        @include tablet {
+            font-size: 18px;
+        }
+    }
+
+    .stock {     
+        padding: 0 10%;
+        @include tablet {
+            padding: 0 $padding-mobile;
+        }
+       
+    }
+
+    .stock-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        @include tablet {
+            gap: $padding-mobile;
+        }
+        @include phone {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    .stock-prod-img {
+        position: relative;
+        @include desktop_only {
+            margin-bottom: 10px;
+        }
+    }
+    .stock-prod-details {
+        @include smallTextFontStyles();
+        h4 {
+            margin-bottom: 10px;
+        }
+        span {
+            font-weight: 500;
+        }
+        p {
+            margin: 0;
+        }
+    }
+
+    .lightbox-content {
+        display: none;
+    }
+}

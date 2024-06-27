@@ -1,0 +1,51 @@
+.questions-container {
+    display: flex;
+    padding: rem(55) 18% rem(60) 18%;
+    margin-top: $space-big;
+    background-color: $light-grey;
+    @include tablet {
+        margin-top: $padding-mobile;
+        padding: $padding-mobile;
+    }
+    @include phone {
+        flex-wrap: wrap;
+    }
+    .photo {
+        margin-right: $space-normal;
+        width: 235px;
+        @include phone {
+            margin-right: 0;
+            margin-bottom: 25px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        img {
+            height: auto;
+            display: block;
+            border-radius: 50%;
+            @include phone {
+                width: 200px;
+            }
+        }
+     
+    }
+
+    .info {
+        flex: 1;
+        h3 {
+            margin: 0;
+            margin-bottom: 12px;
+        }
+        p {
+            margin: 0;
+        }
+        blockquote {
+            margin: 0;
+        }
+        .btn {
+            margin-top: 30px;
+        }
+    }
+
+}

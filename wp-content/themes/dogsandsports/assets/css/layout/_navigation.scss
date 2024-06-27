@@ -1,0 +1,232 @@
+@import "../components/colors.scss";
+//@import "../components/utilities.scss";
+
+div#primary-menu {
+  margin-top: -100vh;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+button.menu-toggle {
+    background: $dark_brown;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: absolute;
+    right: -38px;
+    top: -35px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    
+    span.line {
+        border: 1.5px solid white;
+        display: block;
+        float: left;
+        width: 30px;
+        margin-top: 5px;
+        clear: both;
+        border-radius: 2px;
+        margin-left: 14px;
+        text-align: right;
+    }
+    
+    svg {
+      opacity: 0;
+      display: none;
+    }
+    
+    span.line:first-child {
+      margin-top: 18px;
+    }
+    
+    span.line.short {
+        width: 20px;
+        margin-left: 24px;
+    }
+}
+
+.toggled {
+  
+  .search-field {
+      padding-right: 40px; // Add some padding to make space for the button
+          width: calc(100vw - 40px);
+          margin-left: 20px;
+          margin-bottom: 40px;
+          font-size: 16px;
+          padding: 15px;
+          border-radius: 5px;
+          margin-top: 40px;
+          border: none;
+  }
+  
+  div#primary-menu {
+    margin-top: 0;
+    transition: all 0.5s ease;
+    opacity: 1;
+  }
+  
+  button.menu-toggle {
+      background: white;
+      color: $light_brown;
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      position: absolute;
+      right: -38px;
+      top: -35px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      
+      span.line {
+        display: none;
+        opacity: 0;
+      }
+      
+      svg {
+          opacity: 1;
+          display: block;
+          width: 19px;
+          height: 19px;
+          margin: 24px 10px 0 22px;
+      }
+  }
+  
+  
+
+  
+}
+
+
+.main-navigation {
+    display: block;
+    width: 100%;
+    border-top: 1px solid white;
+
+    ul {
+        display: block;
+        text-align: left;
+        margin-left: 15px;
+        font-size: 19px;
+        line-height:  25px;
+        
+        ul.children {
+            margin-left: 0;
+            box-shadow: none;
+            
+           &.open-sub {
+             left: 0;
+             position: relative;
+             margin-top: 15px;
+           }
+           
+           li {
+             width: 100%;
+             font-weight: 400;
+             border-top: 0;
+             padding-bottom: 8px;
+             padding-top: 0;
+           }
+           
+          
+        }
+        
+        li {
+          font-weight: 600;
+          position: relative;
+          display: inline-block;
+          width: calc(100% - 15px);
+          
+          padding: 17px 0;
+          border-top: 1px solid $dark_brown;
+          
+          &:hover {
+            a {
+              color: $beige;
+            }
+            
+            .open-sub {
+              a {
+                color: white;
+              }
+              li {
+               &:hover a {
+                 color: $beige;
+               }
+              }
+            }
+            
+            &.page_item_has_children:after {
+              opacity: 0.3;
+            }
+          }
+          
+          &.page_item_has_children {
+              
+          }
+          
+          &.page_item_has_children:after {
+              content: "";
+              background-image: url(/wp-content/themes/dogsandsports/assets/img/dropdown.svg);
+              width: 50px;
+              height: 50px;
+              display: inline-block;
+              background-repeat: no-repeat;
+              position: absolute;
+              cursor: pointer;
+              right: -33px;
+              top: 28px;
+          }
+          
+
+          a {
+            color: white;
+            width: 100%;
+          }
+
+        }
+
+    }
+}
+
+.nav-search {
+    position: relative;
+
+    .search-form {
+        display: flex;
+        align-items: center;
+        position: relative;
+        
+        .search-field {
+            padding-right: 40px; // Add some padding to make space for the button
+            
+        }
+
+        .search-submit {
+            background-size: cover;        
+            background: url("../img/search_weiss.svg");
+            overflow: hidden;
+            text-indent: -9999px;
+            padding: 0;
+            width: 22px;
+            height: 22px;
+            transition: opacity 0.3s ease;
+            margin: 0;
+            border: none;
+            background-size: cover;
+            margin-left: -34px;
+        }
+    }
+}
+
+
+.main-navigation ul li.page_item_has_children.open-sub:after {
+  right: 0;
+  top: -17px;
+  transform: rotate(180deg);
+}
+
+.main-navigation ul li:hover > ul, .main-navigation ul li.focus > ul {
+    left: -999em;
+}

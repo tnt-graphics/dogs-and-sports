@@ -1,0 +1,17 @@
+@import "../components/utilities.scss";
+@import "../components/colors.scss";
+@import "../components/breadcrumbs.scss";
+@import "../components/page-content.scss";
+@import "../components/lightbox.scss";
+@import "../components/works.scss";
+
+#works-page {
+
+    .works {     
+        padding: 0 10%;
+        @include tablet {
+            padding: 0 $padding-mobile;
+        }
+       
+    }
+}

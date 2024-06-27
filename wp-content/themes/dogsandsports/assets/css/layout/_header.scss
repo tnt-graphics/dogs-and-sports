@@ -1,0 +1,22 @@
+
+@import "../components/colors.scss";
+
+header#masthead {
+  align-items: center;
+  justify-items: center;
+  background-color: $light_brown;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  max-width: 100%;
+  
+  img.logo {
+    padding-bottom: 10px;
+  }
+  
+  .login {
+      margin: 10px 20px;
+      position: absolute;
+  }
+
+}

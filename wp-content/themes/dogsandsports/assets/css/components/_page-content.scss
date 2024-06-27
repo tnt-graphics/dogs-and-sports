@@ -1,0 +1,249 @@
+#page-content {  
+    margin: 25px 18% 0 18%;
+    @include tablet{
+        margin: $padding-mobile;
+    }
+
+    &.top-position {
+        margin-top: 205px;
+        @include tablet {
+            margin-top: 120px;
+        }
+    }
+
+    & > :last-child {
+        margin-bottom: 0;
+    }
+
+    h1.page-title {
+        margin: 5px 0 $space-normal 0;
+        @include tablet{
+            margin-bottom: $space-small;
+        }
+        &.has-excerpt {
+            margin-bottom: 20px;
+            @include tablet{
+                margin-bottom: 15px;
+            }
+        }
+        
+    }
+
+    .page-excerpt {
+        @include bigTextFontStyles();
+        margin-bottom: $space-medium;
+
+        @include tablet{
+            margin-bottom: $space-small;
+        }
+        p {
+            margin: 0
+        }
+    }
+
+    h3, h4 {
+        margin: 15px 0;
+    }
+
+    ol li::marker {
+        font-weight: bold;
+    }
+
+    strong {
+        font-weight: 500;
+    }
+
+    a:not(.btn):hover {
+        color: $red_rollover;
+    }
+
+    blockquote {
+        position: relative;
+        text-align: center;
+        margin: $space-normal 0;
+        @include tablet {
+            margin: $padding-mobile 0;
+        }
+        p{
+            margin-bottom: 0;
+        }
+        cite{
+            @include smallTextFontStyles;
+            font-weight: 500;
+            font-style: normal;
+            margin-top: 20px;
+        }
+    }
+
+    ul, ol {
+        padding-left: 20px;
+        margin: $space-very-small 0;
+    }
+
+    & > figure {
+        margin: $space-normal 0;
+        @include tablet{
+            margin: $space-small 0;
+        }
+    }
+
+    .wp-block-buttons {
+        margin: $space-small 0 $space-medium 0;
+        @include tablet {
+            margin: 20px 0 30px 0;
+        }
+    }
+
+    .slider-wrapper {
+        margin: $space-normal 0;
+        @include tablet{
+            margin: $space-small 0;
+        }
+        ul {
+            margin: 0;
+        }
+    }
+
+    h2 + figure, h2 + .wp-block-image  {
+        margin-top: 0;
+    }
+
+    .wp-block-image {
+        position: relative; 
+        img {
+            width: 100%;
+        }
+    }
+
+    .page-title + .wp-block-image  {
+        @include desktop_only {
+            margin-top: rem(80);
+        }
+    }
+
+    .wp-block-image figcaption, .img-caption {
+        margin-top: 7px;
+        margin-bottom: 0;
+    }
+
+    .wp-block-group, .wp-block-columns {
+        margin: $space-normal 0;
+        gap: 15px;
+        @include phone {
+            margin-bottom: 25px;
+        }
+        figure {
+            margin: 0;
+        }
+    }
+
+    .wp-element-caption, .gallery-caption {
+        @include smallTextFontStyles;
+    }
+
+    .wp-block-video {
+        margin: $space-normal 0;
+        @include phone {
+            margin: 50px 0;
+        }
+    }
+
+    form {
+        input[type="text"], 
+        input[type="email"], 
+        input[type="url"], 
+        input[type="password"], 
+        input[type="tel"], 
+        textarea,
+        select {
+            height: 78px;
+            border-radius: 8px;
+            width: 100%;
+            border: 1px solid #CFCFCF;
+            padding: 0 25px;
+            margin-top: 10px;
+        
+            &:focus {
+                outline: 1px solid black;
+                &::placeholder {
+                    opacity: 0;
+                }
+            }
+            @include tablet {
+                height: 45px;
+                padding: 0 10px;
+            }
+        }
+
+        ::placeholder {
+            color: $text_color;
+            line-height: 1.5;
+        }
+  
+        textarea {
+            height: 251px;
+            padding: 20px 30px;
+            @include tablet{
+                height: 150px;
+                padding: 10px 15px;
+            }
+        }
+        label {
+            font-weight: 500;
+        }
+        p {
+            @include desktop_only {
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    .wp-block-heading:has(+ .wpcf7) {
+        margin: $space-normal 0;
+    }
+
+    .wp-block-spacer {
+        height: $space-small !important;
+        @include tablet {
+            display: none;
+        }
+    }
+
+    table {
+        border: none;
+        tbody {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+        tr {
+            background-color: $light-grey;
+            margin-bottom: 7px;
+            border-radius: 10px;
+            width: 100%;
+            display: flex;
+        }
+        tr:first-of-type {
+            color: white;
+        }
+        td, th {
+            border: none;
+            flex: 1;
+            padding: 10px 15px;
+        }
+    }
+
+    .wp-block-table {
+        margin-top: 0;
+    }
+
+
+}
+
+
+#not-found-page {
+    #page-content {
+        text-align: center;
+    }
+}
+
