@@ -5,14 +5,22 @@ html {
 body {
   font-family: "Barlow";
   color: #1A1A1A;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 h1, .h1 {
+  font-size: 32px;
+  line-height: 38px;
   font-weight: 500;
 }
 
 h2, .h2 {
-  font-weight: 500;
+  font-size: 19px;
+  line-height: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 h3, .h3 {
@@ -43,21 +51,81 @@ h4, .h4 {
   src: url("../fonts/barlow-v12-latin-500.woff2") format("woff2");
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-body {
-  font-family: "Barlow";
-  font-weight: 400;
+.page-content, .entry-content, .entry-summary {
+  margin: 0;
 }
 
-main#primary {
+.entry-content ul, .entry-content p, .entry-content h1, .entry-content h2 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+p + .is-style-pfeil-liste {
+  margin-top: -20px;
+}
+
+.wp-block-video {
+  position: relative;
+}
+.wp-block-video.playing:before {
+  background: none;
+}
+.wp-block-video:before {
+  content: "";
+  background-image: url(/wp-content/themes/dogsandsports/assets/img/play-gross.svg);
+  display: grid;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 0;
-  z-index: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50px auto;
+  cursor: pointer;
+  margin-top: -10px;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style-type: none;
+}
+ul.is-style-pfeil-liste li:before {
+  content: "";
+  background-image: url(/wp-content/themes/dogsandsports/assets/img/pfeil.svg);
+  width: 21px;
+  height: 9px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+ul.is-style-pfeil-liste a {
+  color: #8A3324;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    margin-top: -100vh;
+    opacity: 0;
+  }
+  20% {
+    margin-top: -70vh;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
 div#primary-menu {
   margin-top: -100vh;
   transition: all 0.5s ease;
   opacity: 0;
+  height: 10px;
+  overflow: hidden;
 }
 
 button.menu-toggle {
@@ -109,7 +177,10 @@ button.menu-toggle span.line.short {
 .toggled div#primary-menu {
   margin-top: 0;
   transition: all 0.5s ease;
-  opacity: 1;
+  opacity: 0;
+  animation: slideInFromTop 0.5s ease-out forwards;
+  height: auto;
+  overflow: visible;
 }
 .toggled button.menu-toggle {
   background: white;
@@ -252,6 +323,42 @@ header#masthead img.logo {
 header#masthead .login {
   margin: 10px 20px;
   position: absolute;
+}
+
+.post-thumbnail {
+  position: relative;
+  width: 100%;
+  padding-top: 133.3333333333%;
+  overflow: hidden;
+}
+.post-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.wp-block-button {
+  border-radius: 22px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+}
+.wp-block-button.is-style-fill a {
+  background-color: #8A3324;
+  color: white;
+  transition: all 0.5s ease;
+}
+.wp-block-button.is-style-fill a:hover {
+  background-color: #6E291D;
+  transition: all 0.5s ease;
+}
+.wp-block-button.is-style-outline a {
+  background-color: white;
+  color: #8A3324;
 }
 
 /*# sourceMappingURL=dogs.css.map */

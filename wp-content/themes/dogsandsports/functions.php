@@ -186,6 +186,61 @@ function theme_enqueue_scripts() {
 	wp_enqueue_script('jquery');
 	
 	// Enqueue your custom script that depends on jQuery
-	wp_enqueue_script('custom-script', get_template_directory_uri() . '/js/custom-script.js', array('jquery'), null, true);
+	//wp_enqueue_script('custom-script', get_template_directory_uri() . '/js/custom-script.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
+
+
+function dogs_register_acf_block_types()
+{
+  acf_register_block_type([
+	"name" => "header_teaser",
+	"title" => _x("Header Teaser", "header_teaser", "viseca"),
+	"description" => __("Display a Header image with content", "viseca"),
+	"render_template" => "template-parts/block/header-teaser/header-teaser.php",
+	"category" => "viseca-layout-category",
+	"icon" => '<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+		<style type="text/css">
+			.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#F69F29;}
+			.st1{fill:#FFFFFF;}
+			.st2{fill:none;stroke:#000000;stroke-width:0.75;stroke-miterlimit:10;}
+			.st3{fill:none;stroke:#FFFFFF;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;}
+		</style>
+		<g id="Ebene_1_00000039815538117128226940000017649735256919297976_">
+		</g>
+		<rect y="0" class="st0" width="16" height="16"/>
+		<rect x="0.4" y="0.5" class="st1" width="15.2" height="5.8"/>
+		<line class="st2" x1="0.8" y1="5.3" x2="6.7" y2="5.3"/>
+		<path class="st3" d="M7.3,10.2H6.1c-0.4,0-0.7,0.3-0.7,0.7v3.1c0,0.4,0.3,0.7,0.7,0.7h3.1c0.4,0,0.7-0.3,0.7-0.7v-1.2 M8.7,9.7h1.9
+			 M10.5,9.7v1.9 M10.5,9.7l-3.1,3.1"/>
+		</svg>',
+		"enqueue_style" =>
+		  get_template_directory_uri() .
+		  "/assets/css/blocks/header-teaser.css",
+
+	"align" => "full",
+	"mode" => "edit",
+  ]);
+ }
+
+// Check if function exists and hook into setup
+ if (function_exists("acf_register_block_type")) {
+   add_action("init", "dogs_register_acf_block_types");
+ }
+ 
+ 
+ // Add custom block styles for the 'list' block
+ function mytheme_register_custom_block_styles() {
+	 // Register a new block style for ul with class 'fancy-list'
+	 register_block_style(
+		 'core/list',
+		 array(
+			 'name'  => 'pfeil-liste',
+			 'label' => __('Pfeil Liste', 'dogsandsports'),
+		 )
+	 );
+ 
+	
+ }
+ add_action('init', 'mytheme_register_custom_block_styles');

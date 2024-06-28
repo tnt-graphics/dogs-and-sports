@@ -1,10 +1,29 @@
 @import "../components/colors.scss";
 //@import "../components/utilities.scss";
 
+
+@keyframes slideInFromTop {
+  0% {
+    margin-top: -100vh;
+    opacity: 0;
+  }
+  20% {
+    margin-top: -70vh; // First 100px of the animation
+    opacity: 0;
+  }
+  
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
 div#primary-menu {
   margin-top: -100vh;
   transition: all 0.5s ease;
   opacity: 0;
+  height: 10px;
+  overflow: hidden;
 }
 
 button.menu-toggle {
@@ -63,8 +82,13 @@ button.menu-toggle {
   div#primary-menu {
     margin-top: 0;
     transition: all 0.5s ease;
-    opacity: 1;
+   opacity: 0; // Start with the element invisible
+   animation: slideInFromTop 0.5s ease-out forwards; // Adjust timing and easing as needed
+    height: auto;
+    overflow: visible;
   }
+  
+  
   
   button.menu-toggle {
       background: white;

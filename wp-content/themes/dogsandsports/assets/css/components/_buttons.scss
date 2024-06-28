@@ -2,43 +2,33 @@
 @import "colors.scss";
 
 
-button, a.btn, input[type="submit"], .wp-block-button__link {
-    background-color: $red;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
-    padding: 0 20px;
-    height: 58px;
-    line-height: 58px;
-    font-weight: 500;
-    @include tablet {    
-        height: 45px;
-        line-height: 45px;
-        padding: 0 15px;
+.wp-block-button {
+    border-radius: 22px;
+    font-size: 16px;
+    line-height: 22px; 
+    font-weight: 600;
+    
+    &.is-style-fill {
+        a {
+            background-color: $light_brown;
+            color: white;
+            transition: all 0.5s ease;
+
+        }
+        
+        a:hover {
+            background-color: $dark_brown;
+            transition: all 0.5s ease;
+
+        }
     }
-}
-.primary, .wp-block-button__link {
-    &:hover, &:focus {
-        color: white !important;
-        background-color: $red_rollover !important;
+    
+    &.is-style-outline {
+        a {
+            background-color: white;
+            color: $light_brown;
+        }
     }
-    &:visited {
-        background-color: $red;
-        color: white;
-    }
-}
-.wp-block-button__link {
-    font-size: 23px;
-    @include tablet {
-        font-size: 16px;
-    }
-}
-a.btn {
-    display: inline-block;
-    text-decoration: none;
-    &:visited {
-        color: white;
-    }
+    
 }
 

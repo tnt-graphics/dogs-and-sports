@@ -1,0 +1,29 @@
+//@import "../components/utilities.scss";
+@import "../components/colors.scss";
+//@import "../components/main-image.scss";
+//@import "../components/homepage-quote.scss";
+//@import "../components/slider.scss";
+//@import "../components/works.scss";
+
+.header-holder {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: calc(100vh - 110px);
+    text-align: center;
+    display: grid;
+    
+    .featured-content {
+      color: white;
+      align-self: end;
+      max-width: 70%;
+      margin: auto auto 40px auto;
+
+      .wp-block-buttons {
+        display: table;
+        margin: auto;
+      }
+    }
+    
+    
+}

@@ -1,15 +1,70 @@
-@import "../components/utilities.scss";
+//@import "../components/utilities.scss";
 @import "../components/fonts.scss";
+@import "../components/colors.scss";
 
-body {
-  font-family: 'Barlow';
-  font-weight: 400;
+
+.page-content, .entry-content, .entry-summary {
+    margin: 0;
 }
 
-main#primary {
-    position: absolute;
-    top: 0;
-    z-index: 0;
+.entry-content  {
+    ul, p, h1, h2{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+  
 }
 
+p + .is-style-pfeil-liste {
+    margin-top: -20px;
+}
+
+.wp-block-video {
+    position: relative;
+    &.playing {
+        &:before {
+            background: none;
+        }
+    }
+    &:before {
+        content: "";
+           background-image: url(/wp-content/themes/dogsandsports/assets/img/play-gross.svg);
+           display: grid;
+           width: 100%;
+           height: 100%;
+           position: absolute;
+           background-position: center center;
+           background-repeat: no-repeat;
+           background-size: 50px auto;
+           cursor: pointer;
+           margin-top: -10px;
+    } 
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    
+    li {
+        list-style-type: none;
+    }
+   
+    &.is-style-pfeil-liste {
+        li:before {
+               content: "";
+               background-image: url(/wp-content/themes/dogsandsports/assets/img/pfeil.svg);
+               width: 21px;
+               height: 9px;
+               display: inline-block;
+               background-repeat: no-repeat;
+               background-position: left center;
+           }
+
+        a {
+            color: $light_brown;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+    }
+}
 
